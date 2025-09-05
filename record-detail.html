@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>培训详情 - 驾驶员培训</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Status Bar -->
+    <div class="bg-white px-6 pt-3 pb-2 flex justify-between items-center text-sm">
+        <span class="font-medium">9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="bg-white px-6 py-4 border-b flex items-center">
+        <button class="mr-4">
+            <i class="fas fa-arrow-left text-gray-600"></i>
+        </button>
+        <h1 class="text-xl font-bold">培训详情</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="pb-20">
+        
+
+        <!-- Basic Info -->
+        <div class="bg-white p-6 mb-4">
+            <h3 class="font-semibold text-gray-800 mb-4">基本信息</h3>
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <i class="fas fa-calendar text-gray-400 w-5 mr-3"></i>
+                    <span class="text-gray-600">开始时间</span>
+                    <span class="ml-auto font-medium">2024-08-27 09:00</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-gray-400 w-5 mr-3"></i>
+                    <span class="text-gray-600">结束时间</span>
+                    <span class="ml-auto font-medium">2024-08-27 11:00</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-hourglass-half text-gray-400 w-5 mr-3"></i>
+                    <span class="text-gray-600">培训时长</span>
+                    <span class="ml-auto font-medium">2小时</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-tachometer-alt text-gray-400 w-5 mr-3"></i>
+                    <span class="text-gray-600">培训里程</span>
+                    <span class="ml-auto font-medium">12公里</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-gray-400 w-5 mr-3"></i>
+                    <span class="text-gray-600">计时认可</span>
+                    <span class="ml-auto font-medium text-green-600">2小时</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coach Info -->
+        <div class="bg-white p-6 mb-4">
+            <h3 class="font-semibold text-gray-800 mb-4">教练信息</h3>
+            <div class="flex items-center">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" 
+                     alt="王教练" 
+                     class="w-16 h-16 rounded-full mr-4">
+                <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-semibold">王教练</h4>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <span>4.8分</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+
+        <!-- Evaluation -->
+        <div class="bg-white p-6 mb-4">
+            <h3 class="font-semibold text-gray-800 mb-4">培训评价</h3>
+            <div class="space-y-4">
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-gray-600">教练评分</span>
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 font-medium">5.0</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">教练讲解详细，耐心指导，技术娴熟</p>
+                </div>
+                
+                
+            </div>
+        </div>
+
+        <!-- Training Photos -->
+        <div class="bg-white p-6">
+            <h3 class="font-semibold text-gray-800 mb-4">培训照片</h3>
+            <div class="grid grid-cols-3 gap-2">
+                <div class="text-center">
+                    <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-2">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=100&h=100&fit=crop" 
+                             alt="培训照片1" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-xs space-y-1">
+                        <div class="font-medium">签到</div>
+                        <div class="text-gray-600">09:00</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-2">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=100&h=100&fit=crop" 
+                             alt="培训照片2" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-xs space-y-1">
+                        <div class="font-medium">过程</div>
+                        <div class="text-gray-600">10:15</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-2">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=100&h=100&fit=crop" 
+                             alt="培训照片3" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-xs space-y-1">
+                        <div class="font-medium">签退</div>
+                        <div class="text-gray-600">11:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Actions -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t p-4">
+        <button class="w-full bg-blue-500 text-white py-3 rounded-xl font-medium flex items-center justify-center">
+            <i class="fas fa-star mr-2"></i>评价
+        </button>
+    </div>
+</body>
+</html>

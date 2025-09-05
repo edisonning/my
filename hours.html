@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学时统计 - 驾驶员培训</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Status Bar -->
+    <div class="bg-white px-6 pt-3 pb-2 flex justify-between items-center text-sm">
+        <span class="font-medium">9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="bg-white px-6 py-4 border-b flex items-center">
+        <button class="mr-4">
+            <i class="fas fa-arrow-left text-gray-600"></i>
+        </button>
+        <h1 class="text-xl font-bold">培训进度详情</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="p-4 pb-20">
+        <!-- Training Part 1 -->
+        <div class="bg-white rounded-2xl p-6 mb-4 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h4 class="font-semibold text-lg">📚 培训部分一</h4>
+                </div>
+                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">已完成</span>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">标准学时</span>
+                    <span class="font-medium text-gray-800">12小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">培训时长</span>
+                    <span class="font-medium text-gray-800">8小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">计时认可</span>
+                    <span class="font-medium text-gray-800">7小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">监管认可</span>
+                    <span class="font-medium text-gray-800">6小时</span>
+                </div>
+            </div>
+            
+            <div class="mt-4 pt-4 border-t">
+                <div class="flex justify-center space-x-8 mt-4">
+                    <div class="text-center">
+                        <div class="relative w-20 h-20">
+                            <svg class="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-gray-200" stroke="currentColor" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="text-green-500" stroke="currentColor" stroke-width="3" stroke-dasharray="58.3, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-xs font-bold">58.3%</span>
+                                <span class="text-xs text-gray-500">7/12</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-1 block">计时认可</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative w-20 h-20">
+                            <svg class="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-gray-200" stroke="currentColor" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="text-blue-500" stroke="currentColor" stroke-width="3" stroke-dasharray="50, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-xs font-bold">50%</span>
+                                <span class="text-xs text-gray-500">6/12</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-1 block">监管认可</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Training Part 2 -->
+        <div class="bg-white rounded-2xl p-6 mb-4 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h4 class="font-semibold text-lg">🚗 培训部分二</h4>
+                </div>
+                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">培训中</span>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">标准学时</span>
+                    <span class="font-medium text-gray-800">26小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">培训时长</span>
+                    <span class="font-medium text-gray-800">16小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">计时认可</span>
+                    <span class="font-medium text-gray-800">14小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">监管认可</span>
+                    <span class="font-medium text-gray-800">13小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">已完成里程</span>
+                    <span class="font-medium text-gray-800">48公里</span>
+                </div>
+            </div>
+            
+            <div class="mt-4 pt-4 border-t">
+                <div class="flex justify-center space-x-8 mt-4">
+                    <div class="text-center">
+                        <div class="relative w-20 h-20">
+                            <svg class="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-gray-200" stroke="currentColor" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="text-yellow-500" stroke="currentColor" stroke-width="3" stroke-dasharray="53.8, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-xs font-bold">53.8%</span>
+                                <span class="text-xs text-gray-500">14/26</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-1 block">计时认可</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative w-20 h-20">
+                            <svg class="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-gray-200" stroke="currentColor" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="text-blue-500" stroke="currentColor" stroke-width="3" stroke-dasharray="50, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-xs font-bold">50%</span>
+                                <span class="text-xs text-gray-500">13/26</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-1 block">监管认可</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Training Part 3 -->
+        <div class="bg-white rounded-2xl p-6 mb-4 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h4 class="font-semibold text-lg">🛣️ 培训部分三</h4>
+                </div>
+                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">待审核</span>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">标准学时</span>
+                    <span class="font-medium text-gray-800">40小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">标准里程</span>
+                    <span class="font-medium text-gray-800">260公里</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">培训时长</span>
+                    <span class="font-medium text-gray-800">8小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">已完成里程</span>
+                    <span class="font-medium text-gray-800">60公里</span>
+                </div>
+            </div>
+            
+            <div class="mt-4 pt-4 border-t">
+                <div class="flex justify-center space-x-6 mt-4">
+                    <div class="text-center">
+                        <div class="relative w-16 h-16">
+                            <svg class="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-gray-200" stroke="currentColor" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="text-yellow-500" stroke="currentColor" stroke-width="3" stroke-dasharray="20, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-xs font-bold">20%</span>
+                                <span class="text-xs text-gray-500">8/40</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-1 block">计时认可</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative w-16 h-16">
+                            <svg class="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-gray-200" stroke="currentColor" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="text-blue-500" stroke="currentColor" stroke-width="3" stroke-dasharray="20, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-xs font-bold">20%</span>
+                                <span class="text-xs text-gray-500">8/40</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-1 block">监管认可</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative w-16 h-16">
+                            <svg class="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-gray-200" stroke="currentColor" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="text-green-500" stroke="currentColor" stroke-width="3" stroke-dasharray="23, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-xs font-bold">23%</span>
+                                <span class="text-xs text-gray-500">60/260</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-1 block">里程进度</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+
+        <!-- Training Part 4 -->
+        <div class="bg-white rounded-2xl p-6 mb-4 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h4 class="font-semibold text-lg">🎓 培训部分四</h4>
+                </div>
+                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">待培训</span>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">标准学时</span>
+                    <span class="font-medium text-gray-800">10小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">培训时长</span>
+                    <span class="font-medium text-gray-800">0小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">计时认可</span>
+                    <span class="font-medium text-gray-400">0小时</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">监管认可</span>
+                    <span class="font-medium text-gray-400">0小时</span>
+                </div>
+            </div>
+            
+            <div class="mt-4 pt-4 border-t">
+                <div class="flex justify-center space-x-6 mt-4">
+                    <div class="text-center">
+                        <div class="relative w-16 h-16">
+                            <svg class="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-gray-200" stroke="currentColor" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="text-gray-400" stroke="currentColor" stroke-width="3" stroke-dasharray="0, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-xs font-bold">0%</span>
+                                <span class="text-xs text-gray-500">0/10</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-1 block">计时认可</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative w-16 h-16">
+                            <svg class="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+                                <path class="text-gray-200" stroke="currentColor" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="text-gray-400" stroke="currentColor" stroke-width="3" stroke-dasharray="0, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-xs font-bold">0%</span>
+                                <span class="text-xs text-gray-500">0/10</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-1 block">监管认可</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>

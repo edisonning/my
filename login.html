@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 驾驶员培训</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="flex flex-col items-center justify-center min-h-screen px-6">
+        <!-- App Logo -->
+        <div class="mb-8 text-center">
+            <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <i class="fas fa-car text-white text-3xl"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800">驾驶员培训</h1>
+            <p class="text-gray-600 mt-1">学员端</p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="w-full max-w-sm">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h2 class="text-xl font-semibold text-center mb-6">学员登录</h2>
+                
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            <i class="fas fa-id-card mr-2"></i>身份证号
+                        </label>
+                        <input type="text" 
+                               placeholder="请输入您的身份证号"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            <i class="fas fa-lock mr-2"></i>密码
+                        </label>
+                        <input type="password" 
+                               placeholder="请输入密码后六位"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <label class="text-sm font-medium text-gray-700">项目选择</label>
+                        <button class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
+                            切换项目
+                        </button>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-xl font-medium hover:from-blue-600 hover:to-indigo-700 transition-all shadow-lg">
+                        <i class="fas fa-sign-in-alt mr-2"></i>学员登录
+                    </button>
+                </form>
+                
+                <div class="mt-4 text-center">
+                    <button onclick="showRoleModal()" 
+                            class="text-sm text-blue-600 hover:text-blue-800 font-medium">
+                        其他角色登录 <i class="fas fa-chevron-down ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    
+    <!-- Role Selection Modal -->
+    <div id="roleModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-6 mx-4 max-w-sm w-full">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="font-semibold text-lg">选择登录角色</h3>
+                <button onclick="hideRoleModal()" class="text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="space-y-3">
+                <button onclick="selectRole('school')" 
+                        class="w-full flex items-center p-4 border border-blue-200 rounded-xl hover:bg-blue-50 transition-colors">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-school text-blue-600 text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-medium text-blue-900">驾校登录</h4>
+                        <p class="text-sm text-blue-600">驾校管理员入口</p>
+                    </div>
+                </button>
+                
+                <button onclick="selectRole('coach')" 
+                        class="w-full flex items-center p-4 border border-green-200 rounded-xl hover:bg-green-50 transition-colors">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-chalkboard-teacher text-green-600 text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-medium text-green-900">教练登录</h4>
+                        <p class="text-sm text-green-600">教练工作台入口</p>
+                    </div>
+                </button>
+                
+                <button onclick="selectRole('admin')" 
+                        class="w-full flex items-center p-4 border border-purple-200 rounded-xl hover:bg-purple-50 transition-colors">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-cog text-purple-600 text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-medium text-purple-900">管理登录</h4>
+                        <p class="text-sm text-purple-600">系统管理入口</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showRoleModal() {
+            document.getElementById('roleModal').classList.remove('hidden');
+            document.getElementById('roleModal').classList.add('flex');
+        }
+        
+        function hideRoleModal() {
+            document.getElementById('roleModal').classList.add('hidden');
+            document.getElementById('roleModal').classList.remove('flex');
+        }
+        
+        function selectRole(role) {
+            // 这里可以添加角色选择的逻辑
+            console.log('Selected role:', role);
+            hideRoleModal();
+            // 可以跳转到对应的登录页面或更新表单
+        }
+        
+        // 点击模态框外部关闭
+        document.getElementById('roleModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideRoleModal();
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>

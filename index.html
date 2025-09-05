@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>驾驶员培训学员App - 高保真原型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .iphone-frame {
+            width: 393px;
+            height: 852px;
+            border-radius: 47px;
+            background: #1a1a1a;
+            padding: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+        }
+        .iphone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 37px;
+            background: white;
+            overflow: hidden;
+        }
+        .prototype-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">驾驶员培训学员App - 高保真原型</h1>
+        
+        <div class="prototype-grid">
+            <!-- Login Screen -->
+            <div class="iphone-frame">
+                <div class="iphone-screen">
+                    <iframe src="login.html" class="w-full h-full border-0" title="登录页面"></iframe>
+                </div>
+                <p class="text-center mt-2 text-sm text-gray-600">登录页面</p>
+            </div>
+
+            <!-- Home Dashboard -->
+            <div class="iphone-frame">
+                <div class="iphone-screen">
+                    <iframe src="home.html" class="w-full h-full border-0" title="首页仪表盘"></iframe>
+                </div>
+                <p class="text-center mt-2 text-sm text-gray-600">首页仪表盘</p>
+            </div>
+
+            <!-- Hours Statistics -->
+            <div class="iphone-frame">
+                <div class="iphone-screen">
+                    <iframe src="hours.html" class="w-full h-full border-0" title="学时统计"></iframe>
+                </div>
+                <p class="text-center mt-2 text-sm text-gray-600">学时统计</p>
+            </div>
+
+            <!-- Training Records -->
+            <div class="iphone-frame">
+                <div class="iphone-screen">
+                    <iframe src="records.html" class="w-full h-full border-0" title="培训记录"></iframe>
+                </div>
+                <p class="text-center mt-2 text-sm text-gray-600">培训记录</p>
+            </div>
+
+            <!-- Booking System 
+            <div class="iphone-frame">
+                <div class="iphone-screen">
+                    <iframe src="booking.html" class="w-full h-full border-0" title="预约学车"></iframe>
+                </div>
+                <p class="text-center mt-2 text-sm text-gray-600">预约学车</p>
+            </div>
+            -->
+            <!-- Theory Learning 
+            <div class="iphone-frame">
+                <div class="iphone-screen">
+                    <iframe src="learning.html" class="w-full h-full border-0" title="理论学习"></iframe>
+                </div>
+                <p class="text-center mt-2 text-sm text-gray-600">理论学习</p>
+            </div>
+            -->
+            <!-- Record Detail  -->
+            <div class="iphone-frame">
+                <div class="iphone-screen">
+                    <iframe src="record-detail.html" class="w-full h-full border-0" title="记录详情"></iframe>
+                </div>
+                <p class="text-center mt-2 text-sm text-gray-600">记录详情</p>
+            </div>
+             <!-- Profile  -->
+            <div class="iphone-frame">
+                <div class="iphone-screen">
+                    <iframe src="profile.html" class="w-full h-full border-0" title="个人中心"></iframe>
+                </div>
+                <p class="text-center mt-2 text-sm text-gray-600">个人中心</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

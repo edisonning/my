@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>培训记录 - 驾驶员培训</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Status Bar -->
+    <div class="bg-white px-6 pt-3 pb-2 flex justify-between items-center text-sm">
+        <span class="font-medium">9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="bg-white px-6 py-4 border-b flex items-center">
+        <button class="mr-4">
+            <i class="fas fa-arrow-left text-gray-600"></i>
+        </button>
+        <h1 class="text-xl font-bold">培训记录</h1>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="bg-white border-b">
+        <div class="flex">
+            <button class="flex-1 py-3 text-center border-b-2 border-blue-500 text-blue-600 font-medium text-sm">
+                培训部分一
+            </button>
+            <button class="flex-1 py-3 text-center text-gray-600 text-sm">
+                培训部分二
+            </button>
+            <button class="flex-1 py-3 text-center text-gray-600 text-sm">
+                培训部分三
+            </button>
+            <button class="flex-1 py-3 text-center text-gray-600 text-sm">
+                培训部分四
+            </button>
+        </div>
+    </div>
+
+    <!-- Records List -->
+    <div class="px-4 pb-20">
+        <!-- Training Records -->
+        <div class="space-y-4">
+            <!-- Record 1 -->
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="flex items-start space-x-3">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" 
+                         alt="学员头像" 
+                         class="w-12 h-12 rounded-full">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-medium">张三</h4>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">实车培训</span>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">开始时间</span>
+                                <span class="font-medium">2024-08-27 09:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">结束时间</span>
+                                <span class="font-medium">2024-08-27 11:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">培训时长</span>
+                                <span class="font-medium">2小时</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">计时认可</span>
+                                <span class="font-medium text-green-600">2学时</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">审核状态</span>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">审核通过</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-3 bg-blue-50 text-blue-600 py-2 rounded-lg text-sm font-medium hover:bg-blue-100 transition-colors">
+                            查看培训详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Record 2 -->
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="flex items-start space-x-3">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" 
+                         alt="李四头像" 
+                         class="w-12 h-12 rounded-full object-cover">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-medium">李四</h4>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">远程培训</span>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">开始时间</span>
+                                <span class="font-medium">2024-08-26 14:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">结束时间</span>
+                                <span class="font-medium">2024-08-26 15:30</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">培训时长</span>
+                                <span class="font-medium">1.5小时</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">计时认可</span>
+                                <span class="font-medium text-green-600">1.5学时</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">审核状态</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">待审核</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-3 bg-blue-50 text-blue-600 py-2 rounded-lg text-sm font-medium hover:bg-blue-100 transition-colors">
+                            查看培训详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Record 3 -->
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="flex items-start space-x-3">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" 
+                         alt="学员头像" 
+                         class="w-12 h-12 rounded-full">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-medium">王五</h4>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">课堂培训</span>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">开始时间</span>
+                                <span class="font-medium">2024-08-25 08:30</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">结束时间</span>
+                                <span class="font-medium">2024-08-25 10:30</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">培训时长</span>
+                                <span class="font-medium">2小时</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">计时认可</span>
+                                <span class="font-medium text-red-600">0学时</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">审核状态</span>
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">审核不通过</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">不通过原因</span>
+                                <span class="font-medium text-red-600">培训时长不足</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-3 bg-blue-50 text-blue-600 py-2 rounded-lg text-sm font-medium hover:bg-blue-100 transition-colors">
+                            查看培训详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Record 4 -->
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="flex items-start space-x-3">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face" 
+                         alt="学员头像" 
+                         class="w-12 h-12 rounded-full">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-medium">赵六</h4>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">模拟培训</span>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">开始时间</span>
+                                <span class="font-medium">2024-08-24 13:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">结束时间</span>
+                                <span class="font-medium">2024-08-24 15:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">培训时长</span>
+                                <span class="font-medium">2小时</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">计时认可</span>
+                                <span class="font-medium text-green-600">2学时</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">审核状态</span>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">审核通过</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-3 bg-blue-50 text-blue-600 py-2 rounded-lg text-sm font-medium hover:bg-blue-100 transition-colors">
+                            查看培训详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Modal (Hidden by default) -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-6 mx-4 max-w-sm w-full">
+            <h3 class="font-semibold text-lg mb-4">筛选记录</h3>
+            <div class="space-y-3">
+                <label class="flex items-center">
+                    <input type="checkbox" class="mr-3" checked>
+                    <span>科目一</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="mr-3" checked>
+                    <span>科目二</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="mr-3" checked>
+                    <span>科目三</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="mr-3" checked>
+                    <span>科目四</span>
+                </label>
+            </div>
+            <div class="flex space-x-3 mt-6">
+                <button class="flex-1 py-2 border border-gray-300 rounded-xl">重置</button>
+                <button class="flex-1 py-2 bg-blue-500 text-white rounded-xl">确定</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
