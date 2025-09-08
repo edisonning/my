@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学员信息 - 驾驶员培训</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Status Bar -->
+    <div class="bg-white px-6 pt-3 pb-2 flex justify-between items-center text-sm">
+        <span class="font-medium">9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="bg-white px-6 py-4 border-b flex items-center">
+        <button class="mr-4" onclick="history.back()">
+            <i class="fas fa-arrow-left text-gray-600"></i>
+        </button>
+        <h1 class="text-xl font-bold">学员信息</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="p-4 pb-20">
+        <!-- Basic Information Section -->
+        <div class="bg-white rounded-2xl p-6 mb-4 shadow-sm">
+            <h3 class="font-semibold text-lg mb-4">👤 基本信息</h3>
+            <div class="flex items-center space-x-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" 
+                     alt="学员头像" 
+                     class="w-20 h-20 rounded-full border-2 border-blue-500">
+                <div>
+                    <h4 class="font-bold text-lg">张三</h4>
+                    <p class="text-sm text-gray-600">学员编号：202408001</p>
+                </div>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="flex justify-between items-center py-2 border-b">
+                    <span class="text-gray-600">身份证号</span>
+                    <span class="font-medium">3101********1234</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b">
+                    <span class="text-gray-600">联系电话</span>
+                    <span class="font-medium">138****5678</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b">
+                    <span class="text-gray-600">培训车型</span>
+                    <span class="font-medium">C1</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b">
+                    <span class="text-gray-600">报名日期</span>
+                    <span class="font-medium">2024-08-01</span>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <span class="text-gray-600">所属驾校</span>
+                    <span class="font-medium">上海东方驾校</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="bg-white rounded-2xl shadow-sm mb-4">
+            <div class="flex border-b">
+                <button class="flex-1 py-3 px-4 text-center font-medium text-blue-600 border-b-2 border-blue-600" 
+                        onclick="switchTab('overview')" id="overview-tab">
+                    培训总览
+                </button>
+                <button class="flex-1 py-3 px-4 text-center font-medium text-gray-600" 
+                        onclick="switchTab('daily')" id="daily-tab">
+                    当日培训
+                </button>
+            </div>
+
+            <!-- Training Overview Tab -->
+            <div id="overview-content" class="p-6">
+                <h3 class="font-semibold text-gray-800 mb-3">📊 培训总览</h3>
+                
+                <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                    <div class="text-center">
+                        <div class="text-xl font-bold text-gray-800">140h</div>
+                        <div class="text-xs text-gray-600">标准学时</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xl font-bold text-gray-800">120h</div>
+                        <div class="text-xs text-gray-600">累计培训</div>
+                    </div>
+                </div>
+                
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-600">计时认可</span>
+                            <span class="text-sm font-medium">110/140小时</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 78.6%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-600">监管认可</span>
+                            <span class="text-sm font-medium">105/140小时</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-600">里程进度</span>
+                            <span class="text-sm font-medium">380/300公里</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <button class="w-full mt-4 text-blue-600 text-sm font-medium">
+                        查看详情 <i class="fas fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Daily Training Tab -->
+            <div id="daily-content" class="p-6 hidden">
+                <div class="mb-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-600">最新更新时间</span>
+                        <span class="text-sm font-medium">2024-12-20 14:30</span>
+                    </div>
+                </div>
+
+                <!-- Theory Training -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-gray-800 mb-3">📚 理论培训</h4>
+                    <div class="bg-yellow-50 p-3 rounded-lg mb-3">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-medium">每日最大培训时长</span>
+                            <span class="text-sm font-bold text-yellow-600">360分钟</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 45%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 mt-1">
+                            <span>已完成：45%</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-white border rounded-lg p-3">
+                            <div class="text-center">
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded mb-1 inline-block">90分钟</span>
+                                <div class="text-[11px] font-medium leading-tight">课堂培训</div>
+                            </div>
+                        </div>
+                        <div class="bg-white border rounded-lg p-3">
+                            <div class="text-center">
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded mb-1 inline-block">72分钟</span>
+                                <div class="text-[11px] font-medium leading-tight">远程培训</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Practical Training -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-gray-800 mb-3">🚗 实操培训</h4>
+                    <div class="bg-orange-50 p-3 rounded-lg mb-3">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-medium">每日最大培训时长</span>
+                            <span class="text-sm font-bold text-orange-600">240分钟</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 mt-1">
+                            <span>已完成：75%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-white border rounded-lg p-3">
+                            <div class="text-center">
+                                <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded mb-1 inline-block">120分钟</span>
+                                <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded mb-1 inline-block">45公里</span>
+                                <div class="text-[11px] font-medium leading-tight">实车培训</div>
+                               
+                            </div>
+                        </div>
+                        <div class="bg-white border rounded-lg p-3">
+                            <div class="text-center">
+                                <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded mb-1 inline-block">60分钟</span>
+                                <div class="text-[11px] font-medium leading-tight">模拟培训</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warning Messages -->
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
+                    <h5 class="font-medium text-blue-800 mb-2">💡 温馨提示</h5>
+                    <ul class="text-xs text-blue-700 space-y-1">
+                        <li>1. 理论培训包括课堂培训和远程培训，每日最大培训时长不得超过360分钟</li>
+                        <li>2. 实操培训包括实车培训和模拟培训，每日最大培训时长不得超过240分钟</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t">
+        <div class="flex justify-around py-2">
+            <button class="flex flex-col items-center py-2 px-3 text-gray-600" onclick="window.location.href='index.html'">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-xs mt-1">首页</span>
+            </button>
+            <button class="flex flex-col items-center py-2 px-3 text-blue-600">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all content
+            document.getElementById('overview-content').classList.add('hidden');
+            document.getElementById('daily-content').classList.add('hidden');
+            
+            // Remove active state from all tabs
+            document.getElementById('overview-tab').classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            document.getElementById('overview-tab').classList.add('text-gray-600');
+            document.getElementById('daily-tab').classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            document.getElementById('daily-tab').classList.add('text-gray-600');
+            
+            // Show selected content
+            document.getElementById(tabName + '-content').classList.remove('hidden');
+            document.getElementById(tabName + '-tab').classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            document.getElementById(tabName + '-tab').classList.remove('text-gray-600');
+        }
+    </script>
+</body>
+</html>
