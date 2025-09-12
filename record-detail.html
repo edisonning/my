@@ -32,7 +32,13 @@
 
         <!-- Basic Info -->
         <div class="bg-white p-6 mb-4">
-            <h3 class="font-semibold text-gray-800 mb-4">基本信息</h3>
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="font-semibold text-gray-800">基本信息</h3>
+                <button onclick="toggleBasicInfo()" class="text-blue-500 text-sm flex items-center">
+                    <span id="toggleText">展开</span>
+                    <i id="toggleIcon" class="fas fa-chevron-down ml-1 transition-transform duration-200"></i>
+                </button>
+            </div>
             <div class="space-y-4">
                 <div class="flex items-center">
                     <i class="fas fa-calendar text-gray-400 w-5 mr-3"></i>
@@ -58,6 +64,35 @@
                     <i class="fas fa-check-circle text-gray-400 w-5 mr-3"></i>
                     <span class="text-gray-600">计时认可</span>
                     <span class="ml-auto font-medium text-green-600">2小时</span>
+                </div>
+                
+                <!-- 可展开/收起的内容 -->
+                <div id="expandableContent" class="hidden space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-file-signature text-gray-400 w-5 mr-3"></i>
+                        <span class="text-gray-600">备案状态</span>
+                        <span class="ml-auto font-medium text-green-600">已备案</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-check text-gray-400 w-5 mr-3"></i>
+                        <span class="text-gray-600">备案时间</span>
+                        <span class="ml-auto font-medium">2024-08-27 11:30</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clipboard-check text-gray-400 w-5 mr-3"></i>
+                        <span class="text-gray-600">审核状态</span>
+                        <span class="ml-auto font-medium text-red-600">审核不通过</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-check text-gray-400 w-5 mr-3"></i>
+                        <span class="text-gray-600">审核时间</span>
+                        <span class="ml-auto font-medium">2024-08-27 14:20</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-comment-dots text-gray-400 w-5 mr-3"></i>
+                        <span class="text-gray-600">不通过原因</span>
+                        <span class="ml-auto font-medium text-red-600">培训时长不足</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,11 +148,13 @@
         <!-- Training Photos -->
         <div class="bg-white p-6">
             <h3 class="font-semibold text-gray-800 mb-4">培训照片</h3>
-            <div class="grid grid-cols-3 gap-2">
+            
+            <!-- 签到签退照片 -->
+            <div class="grid grid-cols-2 gap-4 mb-6">
                 <div class="text-center">
                     <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-2">
                         <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=100&h=100&fit=crop" 
-                             alt="培训照片1" 
+                             alt="签到照片" 
                              class="w-full h-full object-cover">
                     </div>
                     <div class="text-xs space-y-1">
@@ -128,18 +165,7 @@
                 <div class="text-center">
                     <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-2">
                         <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=100&h=100&fit=crop" 
-                             alt="培训照片2" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    <div class="text-xs space-y-1">
-                        <div class="font-medium">过程</div>
-                        <div class="text-gray-600">10:15</div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-2">
-                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=100&h=100&fit=crop" 
-                             alt="培训照片3" 
+                             alt="签退照片" 
                              class="w-full h-full object-cover">
                     </div>
                     <div class="text-xs space-y-1">
@@ -148,7 +174,96 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- 过程照片轮播 -->
+            <div class="mb-2">
+                <h4 class="text-sm font-medium text-gray-700 mb-3">培训过程</h4>
+                <div class="relative overflow-hidden rounded-lg">
+                    <div class="flex transition-transform duration-300 ease-in-out" id="processPhotosBanner">
+                        <!-- 过程照片1 -->
+                        <div class="flex-shrink-0 w-full">
+                            <div class="aspect-video bg-gray-200 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=300&h=200&fit=crop" 
+                                     alt="过程照片1" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-xs text-center mt-2 text-gray-600">10:15 - 过程</div>
+                        </div>
+                        <!-- 过程照片2 -->
+                        <div class="flex-shrink-0 w-full">
+                            <div class="aspect-video bg-gray-200 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=300&h=200&fit=crop" 
+                                     alt="过程照片2" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-xs text-center mt-2 text-gray-600">10:30 - 过程</div>
+                        </div>
+                        <!-- 过程照片3 -->
+                        <div class="flex-shrink-0 w-full">
+                            <div class="aspect-video bg-gray-200 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=300&h=200&fit=crop" 
+                                     alt="过程照片3" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-xs text-center mt-2 text-gray-600">10:45 - 过程</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 轮播指示器 -->
+                    <div class="flex justify-center mt-3 space-x-2">
+                        <button class="w-2 h-2 bg-blue-500 rounded-full" onclick="scrollToProcessPhoto(0)"></button>
+                        <button class="w-2 h-2 bg-gray-300 rounded-full" onclick="scrollToProcessPhoto(1)"></button>
+                        <button class="w-2 h-2 bg-gray-300 rounded-full" onclick="scrollToProcessPhoto(2)"></button>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+        <script>
+            function toggleBasicInfo() {
+                const expandableContent = document.getElementById('expandableContent');
+                const toggleText = document.getElementById('toggleText');
+                const toggleIcon = document.getElementById('toggleIcon');
+                
+                if (expandableContent.classList.contains('hidden')) {
+                    expandableContent.classList.remove('hidden');
+                    toggleText.textContent = '收起';
+                    toggleIcon.classList.add('rotate-180');
+                } else {
+                    expandableContent.classList.add('hidden');
+                    toggleText.textContent = '展开';
+                    toggleIcon.classList.remove('rotate-180');
+                }
+            }
+            
+            let currentProcessPhoto = 0;
+            const totalProcessPhotos = 3;
+            
+            function scrollToProcessPhoto(index) {
+                const banner = document.getElementById('processPhotosBanner');
+                const indicators = document.querySelectorAll('[onclick^="scrollToProcessPhoto"]');
+                
+                banner.style.transform = `translateX(-${index * 100}%)`;
+                
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.remove('bg-gray-300');
+                        indicator.classList.add('bg-blue-500');
+                    } else {
+                        indicator.classList.remove('bg-blue-500');
+                        indicator.classList.add('bg-gray-300');
+                    }
+                });
+                
+                currentProcessPhoto = index;
+            }
+            
+            // 自动轮播
+            setInterval(() => {
+                currentProcessPhoto = (currentProcessPhoto + 1) % totalProcessPhotos;
+                scrollToProcessPhoto(currentProcessPhoto);
+            }, 3000);
+        </script>
     </div>
 
     <!-- Bottom Actions -->
